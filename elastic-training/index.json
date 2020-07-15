@@ -23,8 +23,9 @@
   "environment": {
     "uilayout": "editor-terminal",
     "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\nStart using Elasticsearch!\u001b[m\r\n",
-    "hideHiddenFiles": true
-    },
+    "hideHiddenFiles": true,
+    "uieditorpath": "/"
+  },
   "backend": {
     "imageid": "ubuntu:1804"
   }
