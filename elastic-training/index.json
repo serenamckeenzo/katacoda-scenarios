@@ -2,7 +2,7 @@
   "title": "Elastic Stack Training Lesson 1",
   "description": "First Lesson",
   "difficulty": "beginner",
-  "time": "30 minutes",
+  "time": "15 minutes",
   "details": {
     "steps": [{
       "title": "Step 1 - Install Elasticsearch",
@@ -23,7 +23,8 @@
   "environment": {
     "uilayout": "editor-terminal",
     "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\nStart using Elasticsearch!\u001b[m\r\n",
-    "hideHiddenFiles": true
+    "hideHiddenFiles": true,
+    "uieditorpath": "/etc"
   },
   "backend": {
     "imageid": "ubuntu:1804"
