@@ -18,9 +18,7 @@ We can confirm these ports using the netsat command:
 
 Open `/etc/elasticsearch/elasticsearch.yml`{{open}} and navigate to the **Network** settings
 
-```
-# ---------------------------------- Network -----------------------------------
-#
+```yaml
 # Set the bind address to a specific IP (IPv4 or IPv6):
 #
 #network.host: 192.168.0.1
@@ -32,12 +30,14 @@ Open `/etc/elasticsearch/elasticsearch.yml`{{open}} and navigate to the **Networ
 # For more information, consult the network module documentation.
 ```
 
-If needed you can change these ports in the elasticsearch.yml with the below settings:
+As you can see by default these settings are commented out and thus Elasticsearch is binding to localhost
+(as confirmed by the netstat command above) on ports 9200 and 9300. <br>
+The default yaml tells you how to change the http port if needed, however there are even more granular settings you can use described in the [documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-network.html "Network settings").
+
+`http.port: 9200`
+
+However to change the transport port you'll need to refer to the [documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-transport.html "Transport settings") to find the below setting:
 
 `transport.port: 9300`
-
-and
-
-`network.port: 9200`
 
 However for our purposes we will keep the default settings.
