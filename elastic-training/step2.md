@@ -10,7 +10,7 @@ As we're using the default settings, Elasticsearch should start up without probl
 
 `systemctl status elasticsearch`{{execute}}
 
-By default Elasticsearch binds to two ports: 9200 for HTTP traffic and 9300 for transport layer traffic. /n
+By default Elasticsearch binds to two ports: 9200 for HTTP traffic and 9300 for transport layer traffic. <br>
 We can confirm these ports using the netsat command:
 
 `netstat -tulpn | grep '9200\|9300'`{{execute interrupt}}
