@@ -11,11 +11,11 @@ Use curl to download the desired version of Elasticsearch:
 
 Before we can install our local rpm we will need to install alien in the interactive shell.
 
-`apt install alien`
+`apt install alien`{{execute}}
 
 And then we can use alien (or yum on RHEL machines) to install Elasticsearch:
 
-`alien -i -v ./elasticsearch.rpm`
+`alien -i -v ./elasticsearch.rpm`{{execute}}
 
 ## Option 2: Install Elasticsearch using package manager
 
