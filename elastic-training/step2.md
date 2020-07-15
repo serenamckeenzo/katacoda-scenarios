@@ -18,7 +18,7 @@ We can confirm these ports using the netsat command:
 
 Open `/etc/elasticsearch/elasticsearch.yml`{{open}} and navigate to the **Network** settings
 
-```yaml
+```
 # Set the bind address to a specific IP (IPv4 or IPv6):
 #
 #network.host: 192.168.0.1
