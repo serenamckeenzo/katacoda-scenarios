@@ -11,7 +11,7 @@
     {
       "title": "Step 2 - Start Elasticsearch",
       "text": "step2.md",
-      "verify": "step2-verify.sh"
+      "verify": "systemctl is-active --quiet elasticsearch"
     },
     {
       "title": "Step 3 - Install and start Kibana",
