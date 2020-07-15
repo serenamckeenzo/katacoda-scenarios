@@ -10,7 +10,12 @@
     },
     {
       "title": "Step 2 - Start Elasticsearch",
-      "text": "step2.md"
+      "text": "step2.md",
+      "verify": "step2-verify.sh"
+    },
+    {
+      "title": "Step 3 - Install and start Kibana",
+      "text": "step3.md",
     }],
     "intro": {
       "text": "intro.md",
