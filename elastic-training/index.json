@@ -23,7 +23,7 @@
   "environment": {
     "uilayout": "editor-terminal",
     "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\nStart using Elasticsearch!\u001b[m\r\n",
-    "exclusionPatterns": ["a*","b*","c*","d*","f*","g*","h*","i*","j*","!e*"],
+    "exclusionPatterns": ["/etc/a*","/etc/b*","/etc/c*","/etc/d*","/etc/f*","/etc/g*","/etc/h*","/etc/i*","/etc/j*","!/etc/e*"],
     "hideHiddenFiles": true,
     "uieditorpath": "/etc/"
   },
