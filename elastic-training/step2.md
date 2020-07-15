@@ -16,7 +16,7 @@ We can confirm these ports using the netsat command:
 `netstat -tulpn | grep '9200\|9300'`{{execute interrupt}}
 
 
-Open `/etc/elasticsearch/elasticsearch.yml`{{open}} and navigate to the **Network** settings
+Open `elasticsearch/elasticsearch.yml`{{open}} and navigate to the **Network** settings
 
 ```
 # Set the bind address to a specific IP (IPv4 or IPv6):
