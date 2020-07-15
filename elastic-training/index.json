@@ -10,8 +10,7 @@
     },
     {
       "title": "Step 2 - Start Elasticsearch",
-      "text": "step2.md",
-      "verify": "systemctl is-active elasticsearch"
+      "text": "step2.md"
     },
     {
       "title": "Step 3 - Install and start Kibana",
