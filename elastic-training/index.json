@@ -5,8 +5,12 @@
   "time": "15 minutes",
   "details": {
     "steps": [{
-      "title": "Step 1 - Run Command",
+      "title": "Step 1 - Install Elasticsearch",
       "text": "step1.md"
+    },
+    {
+      "title": "Step 2 - Start Elasticsearch",
+      "text": "step2.md"
     }],
     "intro": {
       "text": "intro.md",
@@ -18,7 +22,10 @@
   },
   "environment": {
     "uilayout": "editor-terminal",
-    "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\nStart using Elasticsearch\u001b[m\r\n"
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\nStart using Elasticsearch!\u001b[m\r\n",
+    "exclusionPatterns": ["Desktop*"],
+    "hideHiddenFiles": true,
+    "uieditorpath": "/etc/"
   },
   "backend": {
     "imageid": "ubuntu:1804"

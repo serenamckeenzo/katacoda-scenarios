@@ -1,7 +1,4 @@
-In this step we will download and install Elasticsearch.
-
-Depending on your environment, you can download the Elasticsearch rpm from the Elastic website directly,
-or use a package manager like yum or apt-get:
+In this step we will start the Elasticsearch service and ensure it's running correctly.
 
 ## Option 1: Download and install manually
 
