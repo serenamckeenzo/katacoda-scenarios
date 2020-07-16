@@ -1,4 +1,4 @@
-Kibana can be installed in the same way Elastisearch was - either downloading manually or via a package manager.
+Metricbeat agents can be installed in the same way Elastisearch was - either downloading manually or via a package manager.
 
 ## Install Kibana
 

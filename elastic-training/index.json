@@ -15,6 +15,14 @@
     {
       "title": "Step 3 - Install and start Kibana",
       "text": "step3.md"
+    },
+    {
+      "title": "Step 4 - Connect Kibana and Elasticsearch",
+      "text": "step4.md"
+    },
+    {
+      "title": "Step 5 - Install and start Metricbeat",
+      "text": "step5.md"
     }],
     "intro": {
       "text": "intro.md",
@@ -27,7 +35,12 @@
   "environment": {
     "uilayout": "editor-terminal",
     "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\nStart using Elasticsearch!\u001b[m\r\n",
-    "hideHiddenFiles": true
+    "hideHiddenFiles": true,
+    "uieditorpath": "/etc/",
+    "showdashboard": true,
+    "dashboards": [
+        {"name": "Kibana UI", "port": 5601}
+      ]
   },
   "backend": {
     "imageid": "ubuntu:1804"
