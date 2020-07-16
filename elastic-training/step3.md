@@ -26,4 +26,4 @@ By default Kibana binds to port 5601 for HTTP traffic which we can verify with t
 
 `netstat -tulpn | grep '5601'`{{execute interrupt}}
 
-The port can be changed in `/etc/kibana/kibana.yml`{{open}} under the **Network** settings.
+The port can be changed in `etc/kibana/kibana.yml`{{open}} under the **Network** settings.
