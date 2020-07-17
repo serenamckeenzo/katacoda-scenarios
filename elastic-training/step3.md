@@ -14,6 +14,46 @@ As we have already configured the Elastic repository in the previous step we can
 
 `sudo apt-get install kibana=7.8.0`{{execute}}
 
+## Configure Kibana
+
+Although Kibana start up with the default settings, in order to be able to hit the GUI we will need to change Kibana's bind settngs.
+
+Looking in `/etc/`, `kibana/kibana.yml`{{open}} you will find the following description:
+
+```
+# Specifies the address to which the Kibana server will bind. IP addresses and host names are both valid values.
+# The default is 'localhost', which usually means remote machines will not be able to connect.
+# To allow connections from remote users, set this parameter to a non-loopback address.
+#server.host: "localhost"
+```
+
+To allow ourselves to connect to the Kibana server through Katacoda, we'll have to bind the service to its IP address.
+
+First let's check the IP address of our server:
+
+`ip addr show`{{execute}}
+
+You should see a similar output:
+<pre>
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host
+       valid_lft forever preferred_lft forever
+2: ens3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 02:42:ac:11:00:4e brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.78/16 brd 172.17.255.255 scope global ens3
+       valid_lft forever preferred_lft forever
+    inet6 fe80::42:acff:fe11:4e/64 scope link
+       valid_lft forever preferred_lft forever
+</pre>
+
+In this line you can see your current IP address: `inet 172.17.0.78/16 brd 172.17.255.255 scope global ens3`
+which in this example is `172.17.0.78`.
+
+<pre class="file" data-filename="app.js" data-target="insert"  data-marker='#server.host: "localhost"'>server.host: "[your ip address]"</pre>
+
 ## Start Kibana
 
 Again, we can use systemctl commands to start and check Kibana.

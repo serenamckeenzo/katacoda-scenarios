@@ -1,5 +1,12 @@
 In this step we will start the Elasticsearch service and ensure it's running correctly.
 
+## Configure Elasticsearch
+
+On most instances the default configuration of Elasticsearch would serve you well on an initial startup - however
+within this training environment we will need to set Elasticsearch's memory requirements lower to avoid out of memory errors.
+
+We can do this easily by modifying the initial and maximum Java heap size - in the `/etc/` folder open `elasticsearch/jvm.options`{{open}}
+
 ## Start the Elasticsearch service
 
 Using systemctl commands we can check the status and start up the Elasticsearch service:
