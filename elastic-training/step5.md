@@ -4,27 +4,26 @@ Metricbeat agents can be installed in the same way Elastisearch was - either dow
 
 **Option 1: Download manually**
 
-`curl https://artifacts.elastic.co/downloads/kibana/kibana-7.8.0-x86_64.rpm > kibana.rpm`{{execute}}
+`curl https://artifacts.elastic.co/downloads/metricbeat/metricbeat-7.8.0-x86_64.rpm > metricbeat.rpm`{{execute}}
 
-`alien -i -v ./kibana.rpm`{{execute}}
+`alien -i -v ./metricbeat.rpm`{{execute}}
 
-# Option 2: Use package manager
+**Option 2: Use package manager**
 
-As we have already configured the Elastic repository in the previous step we can simply install Kibana with:
+As we have already configured the Elastic repository in the previous step we can simply install the agent with:
 
-`sudo apt-get install kibana=7.8.0`{{execute}}
+`sudo apt-get install metricbeat=7.8.0`{{execute}}
 
-## Start Kibana
+To avoid compatibility issues, make sure you always use the same version of the various Elastic stack components.
 
-Again, we can use systemctl commands to start and check Kibana.
+## Check Metricbeat configuration
 
-`systemctl start kibana`{{execute}}
+## Start Metrcibeat
 
-`systemctl status kibana`{{execute}}
+Again, we can use systemctl commands to start and check the beat agent.
 
-By default Kibana binds to port 5601 for HTTP traffic which we can verify with the netsat command:
+`systemctl start metricbeat`{{execute}}
 
-`netstat -tulpn | grep '5601'`{{execute interrupt}}
+`systemctl status metricbeat`{{execute}}
 
-The port can be changed in `/etc/`, `kibana/kibana.yml`{{open}} under the **Network** settings,
-however for this tutorial we'll keep the default port.
+Opening the Kibana frontend, you should now see the data from the agent.

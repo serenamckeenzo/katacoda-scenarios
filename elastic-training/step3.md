@@ -8,7 +8,7 @@ Kibana can be installed in the same way Elastisearch was - either downloading ma
 
 `alien -i -v ./kibana.rpm`{{execute}}
 
-# Option 2: Use package manager
+**Option 2: Use package manager**
 
 As we have already configured the Elastic repository in the previous step we can simply install Kibana with:
 
@@ -26,5 +26,12 @@ By default Kibana binds to port 5601 for HTTP traffic which we can verify with t
 
 `netstat -tulpn | grep '5601'`{{execute interrupt}}
 
-The port can be changed in `/etc/`, `kibana/kibana.yml`{{open}} under the **Network** settings,
-however for this tutorial we'll keep the default port.
+The port can be changed in `/etc/`, `kibana/kibana.yml`{{open}} with the `server.port: 5601` setting:
+
+```
+# Kibana is served by a back end server. This setting specifies the port to use.
+#server.port: 5601
+```
+
+As you can see, the whole of the Kibana configuration is commented out meaning that our service is
+using the default values - for now we'll keep it like that.
