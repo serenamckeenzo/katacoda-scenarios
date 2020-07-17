@@ -52,7 +52,7 @@ You should see a similar output:
 In this line you can see your current IP address: `inet 172.17.0.78/16 brd 172.17.255.255 scope global ens3`
 which in this example is `172.17.0.78`.
 
-<pre class="file" data-filename="app.js" data-target="insert"  data-marker='#server.host: "localhost"'>server.host: "[your ip address]"</pre>
+<pre class="file" data-filename="kibana/kibana.yml" data-target="insert"  data-marker='#server.host: "localhost"'>server.host: "[your ip address]"</pre>
 
 ## Start Kibana
 

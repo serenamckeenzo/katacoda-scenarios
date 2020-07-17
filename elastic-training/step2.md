@@ -7,6 +7,19 @@ within this training environment we will need to set Elasticsearch's memory requ
 
 We can do this easily by modifying the initial and maximum Java heap size - in the `/etc/` folder open `elasticsearch/jvm.options`{{open}}
 
+```
+# Xms represents the initial size of total heap space
+# Xmx represents the maximum size of total heap space
+
+-Xms1g
+-Xmx1g
+```
+
+
+<pre class="file" data-filename="elasticsearch/jvm.options" data-target="insert"  data-marker="-Xms1g
+-Xmx1g">-Xms512m
+-Xmx512m</pre>
+
 ## Start the Elasticsearch service
 
 Using systemctl commands we can check the status and start up the Elasticsearch service:
